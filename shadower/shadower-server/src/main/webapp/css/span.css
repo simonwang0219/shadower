@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.span {
+	position: relative;
+	display: block;
+	height: 20px;
+	border: 0.5px grey dashed;
+	background-color: white;
+	display: block;
+	color: white;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+ .span:hover {
+	background-color: #9DB981;
+	cursor: pointer;
+} 
+
+.root {
+	background-color: #3D6FD2;
+}
+
+
+
+
+.span .child {
+	position: relative;
+	top: 0%;
+	left: 20%;
+	height: 19px;
+	display: block;
+	border: 0.5px grey solid;
+	background-color: #519D3F;
+	color: white;
+	line-height: 19px;
+	font-size: 12px;
+}

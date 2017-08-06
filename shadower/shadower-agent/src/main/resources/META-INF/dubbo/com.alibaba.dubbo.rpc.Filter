@@ -1,0 +1,2 @@
+com.unionpay.shadower.agent.dubbo.ConsumerSpanFilter
+com.unionpay.shadower.agent.dubbo.ProviderSpanFilter

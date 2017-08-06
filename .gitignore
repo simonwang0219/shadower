@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#eclipse project files
+.classpath
+.project
+.settings/
+.metadata/
+RemoteSystemsTempFiles/
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+#maven target files
+target/
+
+#mac FS flie
+.DS_Store
+
+
