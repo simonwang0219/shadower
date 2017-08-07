@@ -6,8 +6,8 @@
 	<dubbo:application name="shadower-example-provider" />
 	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
 	<dubbo:protocol name="dubbo" port="5555" />
-	<dubbo:service interface="com.unionpay.shadower.example.api.AddressService"
+	<dubbo:service interface="org.shadower.example.api.AddressService"
 		ref="addressService" />
 
-	<bean id="addressService" class="com.unionpay.shadower.example.dubbo.service.AddressServiceImpl" />
+	<bean id="addressService" class="org.shadower.example.dubbo.service.AddressServiceImpl" />
 </beans>

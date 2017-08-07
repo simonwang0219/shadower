@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.unionpay</groupId>
+	<groupId>org.shadower</groupId>
 	<artifactId>shadower</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -51,12 +52,12 @@
 
 
 			<dependency>
-				<groupId>com.unionpay</groupId>
+				<groupId>org.shadower</groupId>
 				<artifactId>shadower-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.unionpay</groupId>
+				<groupId>org.shadower</groupId>
 				<artifactId>shadower-util</artifactId>
 				<version>${project.version}</version>
 			</dependency>
@@ -89,6 +90,6 @@
 		<module>shadower-api</module>
 		<module>shadower-agent</module>
 		<module>shadower-server</module>
-    <module>shadower-util</module>
-  </modules>
+		<module>shadower-util</module>
+	</modules>
 </project>

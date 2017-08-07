@@ -10,8 +10,8 @@
            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
            http://www.springframework.org/schema/tx 
            http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
-	<context:component-scan base-package="com.unionpay.shadower.server">
+	<context:component-scan base-package="org.shadower.server">
 		<context:exclude-filter type="regex"
-			expression="com.unionpay.shadower.server.web..*" />
+			expression="org.shadower.server.web..*" />
 	</context:component-scan>
 </beans>

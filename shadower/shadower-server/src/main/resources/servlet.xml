@@ -33,9 +33,9 @@
 			<value type="com.fasterxml.jackson.annotation.JsonInclude.Include">NON_NULL</value>
 		</property>
 	</bean>
-	<context:component-scan base-package="com.unionpay.shadower.server.web" />
+	<context:component-scan base-package="org.shadower.server.web" />
 
-	<bean class="com.unionpay.shadower.server.exception.ExceptionResolver" />
+	<bean class="org.shadower.server.exception.ExceptionResolver" />
 	<!-- 静态资源访问 -->
 	<mvc:resources location="/css/" mapping="/css/**" />
 	<mvc:resources location="/js/" mapping="/js/**" />
