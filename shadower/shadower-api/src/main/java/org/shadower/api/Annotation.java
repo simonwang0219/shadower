@@ -1,22 +1,16 @@
 package org.shadower.api;
 
 public class Annotation {
-	private long timestamp; 
-	private EndPoint endPoint;
+	private long timestamp;
+	private int ipV4;
 
 	public Annotation() {
 		super();
 	}
 
-	public Annotation(long timestamp) {
+	public Annotation(long timestamp, int ipV4) {
 		super();
 		this.timestamp = timestamp;
-	}
-
-	public Annotation(long timestamp, EndPoint endPoint) {
-		super();
-		this.timestamp = timestamp;
-		this.endPoint = endPoint;
 	}
 
 	public long getTimestamp() {
@@ -27,12 +21,12 @@ public class Annotation {
 		this.timestamp = timestamp;
 	}
 
-	public EndPoint getEndPoint() {
-		return endPoint;
+	public int getIpV4() {
+		return ipV4;
 	}
 
-	public void setEndPoint(EndPoint endPoint) {
-		this.endPoint = endPoint;
+	public void setIpV4(int ipV4) {
+		this.ipV4 = ipV4;
 	}
 
 }

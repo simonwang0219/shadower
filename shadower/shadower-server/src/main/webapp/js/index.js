@@ -30,7 +30,11 @@ function bindClickToSpans() {
 	$(".span").click(function() {
 		var id = $(this).attr("id");
 		var span = idToSpanMap[id];
-		var content = formatJson(JSON.stringify(span));
+		var children=parentIdToChildsMap[id];
+		var result=[];
+		result.push(span);
+		result=result.concat(children);
+		var content = formatJson(JSON.stringify(result));
 		showModal(content);
 	});
 

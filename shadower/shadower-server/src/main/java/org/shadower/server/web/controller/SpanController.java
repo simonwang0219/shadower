@@ -35,7 +35,7 @@ public class SpanController {
 
 		String json = SnappyUtil.uncompress(bytes);
 		List<Span> spans = JsonUtil.toList(json, Span.class);
-		storageService.addSpan(spans);
-		return new ShadowerResponse();
+		List<Boolean> result=storageService.addSpan(spans);
+		return new ShadowerResponse(result);
 	}
 }

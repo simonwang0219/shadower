@@ -1,2 +1,2 @@
-org.shadower.agent.dubbo.ConsumerSpanFilter
-org.shadower.agent.dubbo.ProviderSpanFilter
+org.shadower.agent.dubbo.DubboConsumerSpanFilter
+org.shadower.agent.dubbo.DubboProviderSpanFilter

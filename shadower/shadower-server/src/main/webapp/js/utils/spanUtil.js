@@ -2,6 +2,10 @@
  * 数据格式转换
  */
 function convertSpan(span) {
+	var name=span.name;
+	if(name.indexOf("/") >= 0){
+		span.name=name.substr(1,name.length-2);
+	}
 	convertAnnotation(span.cs);
 	convertAnnotation(span.cr);
 	convertAnnotation(span.ss);
@@ -9,9 +13,12 @@ function convertSpan(span) {
 }
 
 function convertAnnotation(annotation) {
-	var endPoint = annotation.endPoint;
-	if (!isEmpty(endPoint) && !isEmpty(endPoint.ipV4)) {
-		endPoint.ipV4 = intToIp(endPoint.ipV4);
+	if(isEmpty(annotation)){
+		return;
+	}
+	var ipV4 = annotation.ipV4;
+	if (!isEmpty(ipV4)) {
+		annotation.ipV4 = intToIp(ipV4);
 	}
 }
 
@@ -84,7 +91,7 @@ function traversalMap(map) {
 
 
 function getRootDisplay(span) {
-	return "<div class='span root'"+" id="+span.id+">" + span.name + "," + span.duration + "ms"+" ("+span.duration/1000+"s)"
+	return "<div class='span root'"+" id="+span.id+">" + span.name + ", " + span.duration + "ms"+" ("+span.duration/1000+"s)"
 			+ "</div>";
 }
 

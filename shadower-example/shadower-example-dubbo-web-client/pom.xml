@@ -119,10 +119,10 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<exclusions>
-			    <exclusion>
-			        <groupId>org.springframework</groupId>
-			        <artifactId>spring</artifactId>
-			    </exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -140,8 +140,14 @@
 
 		<dependency>
 			<groupId>org.shadower</groupId>
+			<artifactId>shadower-agent</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.shadower</groupId>
 			<artifactId>shadower-example-api</artifactId>
 		</dependency>
+
 	</dependencies>
 
 

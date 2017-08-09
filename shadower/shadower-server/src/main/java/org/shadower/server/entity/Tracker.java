@@ -49,6 +49,7 @@ public class Tracker {
 		if (existedSpan != span) {
 			mergeSpan(existedSpan, span);
 		}
+		calculateDuration(existedSpan);
 	}
 
 	private void mergeSpan(Span existedSpan, Span span) {
@@ -73,15 +74,22 @@ public class Tracker {
 			ss = span.getSs();
 			existedSpan.setSs(ss);
 		}
-		
+	}
+
+	private void calculateDuration(Span span) {
+
+		Annotation cr = span.getCr();
+		Annotation cs = span.getCs();
+		Annotation sr = span.getSr();
+		Annotation ss = span.getSs();
+
 		if (cs != null && cr != null) {
-			existedSpan.setDuration(cr.getTimestamp() - cs.getTimestamp());
+			span.setDuration(cr.getTimestamp() - cs.getTimestamp());
 		} else if (cs == null && cr == null) {
 			if (sr != null && ss != null) {
-				existedSpan.setDuration(ss.getTimestamp() - sr.getTimestamp());
+				span.setDuration(ss.getTimestamp() - sr.getTimestamp());
 			}
 		}
-
 	}
 
 	@Override
